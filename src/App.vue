@@ -3,11 +3,21 @@
  * @Author: zhangxin
  * @Date: 2023-05-25 16:46:09
  * @LastEditors: zhangxin
- * @LastEditTime: 2023-05-26 09:31:42
+ * @LastEditTime: 2023-05-26 13:08:01
  * @Description: 
 -->
 <script setup>
 import AppProvider from "@/components/AppProvider";
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  console.log($loadingBar);
+  $loadingBar.start()
+  setTimeout(() => {
+    $loadingBar.finish()
+    $message.success('加载完成，Perfect~')
+  }, 500)
+})
 </script>
 
 <template>

@@ -1,12 +1,12 @@
 <!--
- * @FilePath: \vue3_template\src\pages\test-page\unocss\index.vue
+ * @FilePath: \vue3_js_template\src\pages\test-page\unocss\index.vue
  * @Author: zhangxin
  * @Date: 2023-05-25 16:46:09
  * @LastEditors: zhangxin
- * @LastEditTime: 2023-05-26 09:09:30
+ * @LastEditTime: 2023-05-26 09:45:33
  * @Description: 
 -->
-<script setup lang="ts"></script>
+<script setup></script>
 
 <template>
     <div p-24>

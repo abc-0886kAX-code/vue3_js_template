@@ -1,12 +1,15 @@
 <!--
- * @FilePath: \vue3_template\src\components\AppProvider\index.vue
+ * @FilePath: \vue3_js_template\src\components\AppProvider\index.vue
  * @Author: zhangxin
  * @Date: 2023-05-26 09:10:59
  * @LastEditors: zhangxin
- * @LastEditTime: 2023-05-26 09:11:48
+ * @LastEditTime: 2023-05-26 13:04:43
  * @Description: 
 -->
-<script setup lang='ts'>
+<script setup>
+import { defineComponent, h } from 'vue'
+import { useLoadingBar, useDialog, useMessage, useNotification } from 'naive-ui'
+
 const themeOverrides = {
   common: {
     primaryColor: '#316C72FF',
@@ -15,14 +18,40 @@ const themeOverrides = {
     primaryColorSuppl: '#316C7263',
   },
 }
+
+// 挂载naive组件的方法至window, 以便在全局使用
+function setupNaiveTools() {
+  window.$loadingBar = useLoadingBar()
+  window.$dialog = useDialog()
+  window.$message = useMessage()
+  window.$notification = useNotification()
+}
+
+const NaiveProviderContent = defineComponent({
+  setup() {
+    setupNaiveTools()
+  },
+  render() {
+    return h('div')
+  },
+})
 </script>
 
 <template>
   <n-config-provider :theme-overrides="themeOverrides">
-    <slot></slot>
+    <n-loading-bar-provider>
+      <n-dialog-provider>
+        <n-notification-provider>
+          <n-message-provider>
+            <slot></slot>
+            <NaiveProviderContent />
+          </n-message-provider>
+        </n-notification-provider>
+      </n-dialog-provider>
+    </n-loading-bar-provider>
   </n-config-provider>
-</template>
 
+</template>
 <style scoped lang='scss'>
 
 </style>
