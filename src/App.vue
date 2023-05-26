@@ -2,8 +2,8 @@
  * @FilePath: \vue3_js_template\src\App.vue
  * @Author: zhangxin
  * @Date: 2023-05-25 16:46:09
- * @LastEditors: zhangxin
- * @LastEditTime: 2023-05-26 13:54:11
+ * @LastEditors: SeaSpray
+ * @LastEditTime: 2023-05-26 15:06:25
  * @Description: 
 -->
 <script setup>
@@ -12,15 +12,7 @@ import AppProvider from "@/components/AppProvider";
 
 <template>
 <AppProvider>
-  <n-space m-50>
-    <n-button>Default</n-button>
-    <n-button type="tertiary"> Tertiary </n-button>
-    <n-button type="primary"> Primary </n-button>
-    <n-button type="info"> Info </n-button>
-    <n-button type="success"> Success </n-button>
-    <n-button type="warning"> Warning </n-button>
-    <n-button type="error"> Error </n-button>
-  </n-space>
+  <RouterView/>
   </AppProvider>
 </template>
 
