@@ -3,7 +3,7 @@
  * @Author: zhangxin
  * @Date: 2023-05-25 17:32:58
  * @LastEditors: SeaSpray
- * @LastEditTime: 2023-05-26 14:30:48
+ * @LastEditTime: 2023-05-26 17:03:53
  * @Description:
  */
 import vue from '@vitejs/plugin-vue';
@@ -24,7 +24,7 @@ import Components from "unplugin-vue-components/vite";
 
 import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
 
-import { configMockPlugin } from './mock'; "./mock.js"
+import { configMockPlugin } from './mock';
 
 export function createVitePlugins(viteEnv, isBuild) {
     const plugins = [vue(), VueSetupExtend(), configHtmlPlugin(viteEnv, isBuild), unocss(),Components({
