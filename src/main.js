@@ -4,10 +4,10 @@
  * @Date: 2023-05-26 09:28:44
  * @LastEditors: SeaSpray
  * @LastEditTime: 2023-05-26 15:40:20
- * @Description: 
+ * @Description:
  */
 import { createApp } from 'vue'
-import App from './App.vue'
+import App from './layout/App.vue'
 import { setupRouter } from '@/router'
 import { setupStore } from '@/store'
 import '@/styles/index.scss';

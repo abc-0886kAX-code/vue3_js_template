@@ -1,3 +1,11 @@
+/*
+ * @FilePath: \vue3_js_template\src\router\index.js
+ * @Author: SeaSpray
+ * @Date: 2023-05-26 14:54:53
+ * @LastEditors: SeaSpray
+ * @LastEditTime: 2023-05-26 16:52:25
+ * @Description:
+ */
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { setupRouterGuard } from './guard'
 
@@ -11,7 +19,7 @@ export const basicRoutes = [
   {
     name: 'LOGIN',
     path: '/login',
-    component: () => import('@/pages/login/index.vue'),
+    component: () => import('@/layout/login/index.vue'),
     isHidden: true,
     meta: {
       title: '登录页',
