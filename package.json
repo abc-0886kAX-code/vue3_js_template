@@ -1,0 +1,37 @@
+{
+  "name": "vue3_js_template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue .",
+    "lint:fix": "eslint --fix --ext .js,.vue ."
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@unocss/preset-attributify": "^0.52.3",
+    "@unocss/preset-icons": "^0.52.3",
+    "@unocss/preset-uno": "^0.52.3",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.14.0",
+    "naive-ui": "^2.34.4",
+    "prettier": "^2.8.8",
+    "rollup-plugin-visualizer": "^5.9.0",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.2",
+    "unocss": "^0.52.3",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.3.2",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue-tsc": "^1.4.2"
+  }
+}
